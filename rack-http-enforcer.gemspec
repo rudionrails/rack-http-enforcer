@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Rudolf Schmidt"]
   
   # s.email       = []
-  s.homepage    = "http://github.com/tobmatth/rack-ssl-enforcer"
+  s.homepage    = "http://github.com/rudionrails/rack-http-enforcer"
   s.summary     = "A simple Rack middleware to enforce HTTP"
   s.description = "Rack::HttpEnforcer is a simple Rack middleware to enforce http connections"
   
