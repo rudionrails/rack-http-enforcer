@@ -1,5 +1,15 @@
-require 'bundler'
-Bundler::GemHelper.install_tasks
+begin
+  # require 'bundler'
+rescue LoadError
+  puts "Bundler not available. Install it with: gem install bundler"
+end
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
+end
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
@@ -25,7 +35,7 @@ task :default => :test
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
-  version = File.read( 'VERSION' )
+  version = File.read('VERSION')
   
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "rack-http-enforcer #{version}"

@@ -37,7 +37,12 @@ module Rack
     end
     
     def request_url( env, scheme )
-      Rack::Request.new( env.merge('rack.url_scheme' => scheme) ).url
+      Rack::Request.new( 
+        env.merge(
+          'rack.url_scheme' => scheme, 
+          'SERVER_PORT' => scheme == 'https' ? 443 : 80
+        ) 
+      ).url
     end
     
     def redirect_to
