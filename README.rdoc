@@ -16,10 +16,6 @@ This will redirect all non HTTP requests to HTTP.
 If you want to redirect non HTTP requests to a specific URL, then you may give the :redirect_to option:
 
   use Rack::HttpEnforcer, :redirect_to => 'http://example.org'
-  
-Also, you specify set the :redirect_to option as Proc:
-
-  use Rack::HttpEnforcer, :redirect_to => 
 
 
 
