@@ -1,6 +1,8 @@
 = rack-http-enforcer
 
-Rack::HttpEnforcer is a simple Rack middleware to enforce HTTP connections
+Rack::HttpEnforcer is a simple Rack middleware to enforce HTTP connections. 
+This gem is is based on the rack-ssl-enforcer gem, but does the opposite.
+
 
 == Installation
 
